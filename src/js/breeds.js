@@ -5,7 +5,7 @@ const url3 = 'https://api.thecatapi.com/v1/breeds'
 async function getBreeds() {
 	const response = await fetch(url3)
 	const data = await response.json()
-	console.log(data)
+	if(data.length > 0) {
 	data.forEach(element => {
 		const item = document.createElement('div')
 		item.classList.add('item')
